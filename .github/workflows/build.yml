@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: your_image_name
+  IMAGE_NAME: golang-crud-rest-api-ans-image
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
   DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
