@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      - CONFIG_PATH=/app/config.json
+  db:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=crud_demo
+    volumes:
+      - ./config.json:/app/config.json
