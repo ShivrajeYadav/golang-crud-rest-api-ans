@@ -7,8 +7,8 @@ on:
 
 env:
   IMAGE_NAME: golang-crud-rest-api-ans-image
-  DOCKERHUB_USERNAME: shivrajyadav
-  DOCKERHUB_TOKEN: dckr_pat_LiVzA8zfRw4uEjKlydHzrQw9o40N
+  DOCKERHUB_USERNAME: 'shivrajyadav'
+  DOCKERHUB_TOKEN: 'dckr_pat_LiVzA8zfRw4uEjKlydHzrQw9o40N'
 
 jobs:
   build:
