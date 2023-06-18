@@ -6,9 +6,9 @@ on:
       - main
 
 env:
-  IMAGE_NAME: golang-crud-rest-api-ans-image
-  DOCKERHUB_USERNAME: shivrajyadav
-  DOCKERHUB_TOKEN: dckr_pat_eHl175cWM-CcqdsnFUSkfZNH9Vw
+  IMAGE_NAME: your_image_name
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
 jobs:
   build:
@@ -26,8 +26,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: golang-crud-rest-api-ans-image:latest
-          builder: 23.0
+          tags: ${{ env.IMAGE_NAME }}:latest
+          builder: ${{ env.BUILDKIT_BUILDER }}
           registry: docker.io
-          username: shivrajyadav
-          password: dckr_pat_eHl175cWM-CcqdsnFUSkfZNH9Vw
+          username: ${{ env.DOCKERHUB_USERNAME }}
+          password: ${{ env.DOCKERHUB_TOKEN }}
