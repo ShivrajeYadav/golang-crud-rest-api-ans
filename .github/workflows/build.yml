@@ -27,7 +27,7 @@ jobs:
           context: .
           push: true
           tags: golang-crud-rest-api-ans-image:latest
-          builder: ${{ env.BUILDKIT_BUILDER }}
+          builder: 23.0
           registry: docker.io
           username: shivrajyadav
           password: dckr_pat_eHl175cWM-CcqdsnFUSkfZNH9Vw
