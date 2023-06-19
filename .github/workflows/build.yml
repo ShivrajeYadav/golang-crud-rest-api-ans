@@ -7,7 +7,7 @@ on:
 
 env:
   IMAGE_NAME: golang-crud-rest-api-ans
-  GITHUB_TOKEN: ${{ secrets.NEWGITHUB_TOKEN }}
+  GITHUB_TOKEN: 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
 
 jobs:
   build:
