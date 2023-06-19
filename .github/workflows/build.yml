@@ -27,6 +27,6 @@ jobs:
           push: true
           tags: github.com/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
           builder: ${{ env.BUILDKIT_BUILDER }}
-          registry: github.com
+          registry: https://github.com
           username: shivrajeyadav
           password: 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
