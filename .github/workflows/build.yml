@@ -28,6 +28,6 @@ jobs:
           push: true
           tags: ${{ env.IMAGE_NAME }}:latest
           builder: ${{ env.BUILDKIT_BUILDER }}
-          registry: docker.io
+          registry: https://hub.docker.com/
           username: ${{ env.DOCKERHUB_USERNAME }}
           password: ${{ env.DOCKERHUB_TOKEN }}
