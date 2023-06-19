@@ -7,7 +7,7 @@ on:
 
 env:
   IMAGE_NAME: golang-crud-rest-api-ans
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.NEWGITHUB_TOKEN }}
 
 jobs:
   build:
@@ -29,4 +29,4 @@ jobs:
           builder: ${{ env.BUILDKIT_BUILDER }}
           registry: docker.pkg.github.com
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.NEWGITHUB_TOKEN }}
