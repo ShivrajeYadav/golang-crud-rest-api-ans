@@ -25,8 +25,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: docker.pkg.github.com/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
+          tags: github.com/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
           builder: ${{ env.BUILDKIT_BUILDER }}
-          registry: docker.pkg.github.com
+          registry: github.com
           username: shivrajeyadav
           password: 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
