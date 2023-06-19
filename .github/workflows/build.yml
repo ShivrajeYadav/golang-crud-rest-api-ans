@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  IMAGE_NAME: golang-crud-rest-api-ans-image
-  GITHUB_TOKEN: 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
+  IMAGE_NAME: your_image_name
+  GITHUB_TOKEN: ${{ secrets.NEWGITHUB_TOKEN}}
 
 jobs:
   build:
@@ -25,8 +25,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: github.com/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
+          tags: docker.pkg.github.com/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
           builder: ${{ env.BUILDKIT_BUILDER }}
-          registry: github.com
-          username: shivrajeyadav
-          password: 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
+          registry: docker.pkg.github.com
+          username: ${{ github.actor }}
+          password: ${{ secrets.NEWGITHUB_TOKEN }}
