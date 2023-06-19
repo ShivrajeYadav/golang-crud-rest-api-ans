@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: golang-crud-rest-api-ans-image
+  IMAGE_NAME: golang-crud-rest-api-ans
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: docker.pkg.github.com/${{ env.IMAGE_NAME }}:latest
+          tags: docker.pkg.github.com/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
           builder: ${{ env.BUILDKIT_BUILDER }}
           registry: docker.pkg.github.com
           username: ${{ github.actor }}
