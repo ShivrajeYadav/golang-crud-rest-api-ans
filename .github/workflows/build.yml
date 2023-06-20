@@ -27,6 +27,6 @@ jobs:
           push: true
           tags: github.com/${{ github.repository }}
           builder: ${{ env.BUILDKIT_BUILDER }}
-          registry: github.com
+          registry: https://github.com/shivrajeyadav/golang-crud-rest-api-ans/
           username: shivrajeyadav
           password: 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
